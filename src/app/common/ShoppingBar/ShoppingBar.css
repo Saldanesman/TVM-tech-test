@@ -6,8 +6,27 @@
 	border-right: 1px solid var(--primary-white-color);
 	/* background-color: var(--primary-blue-color); */
 	z-index: 1001;
+	/* overflow-y: scroll; */
+}
+
+.shopping-bar__title {
+	margin: auto;
+	padding-top: 10%;
+	text-align:center;
+	color: var(--primary-white-color);
+	text-transform: uppercase;
 }
 
 li {
+	padding-top: 10%;
 	color: var(--primary-white-color);
+}
+
+.shopping-bar__total__wrapper {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	background-color: var(--primary-green-color);
 }
