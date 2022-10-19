@@ -1,9 +1,5 @@
-
 const NoMatch = () => {
-
-  return (
-    <div>No Mtch</div>
-  );
+	return <div>No Mtch</div>;
 };
 
 export default NoMatch;

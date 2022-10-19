@@ -1,0 +1,13 @@
+.shopping-bar__wrapper {
+	position: sticky;
+	top: 0;
+	background-color: rgb(110, 122, 116);
+	height: 100vh;
+	border-right: 1px solid var(--primary-white-color);
+	/* background-color: var(--primary-blue-color); */
+	z-index: 1001;
+}
+
+li {
+	color: var(--primary-white-color);
+}

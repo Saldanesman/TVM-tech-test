@@ -1,46 +1,44 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing:border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .bike-card__body {
-  width: 100%;
-  height: 100vh;
-  background-color: var(--primary-blue-color);
-  display: grid;
-  place-items: center;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--primary-blue-color);
+	display: grid;
+	place-items: center;
 }
 
 .bike-card__image {
-  width: 30%;
-  height: 100%;
-  object-fit:cover;
-  
-  -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
-  
-  transform-origin:center;
-  transform:perspective(800px) rotateY(25deg);
-  transition:0.5s;
+	width: 30%;
+	height: 100%;
+	object-fit: cover;
+
+	-webkit-box-reflect: below 2px linear-gradient(transparent, transparent, #0004);
+
+	transform-origin: center;
+	transform: perspective(800px) rotateY(25deg);
+	transition: 0.5s;
 }
 
 .bike-card__wrapper {
-  max-width:600px;
-  max-height:350px;
-  
-  
-  
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:20px;
+	max-width: 600px;
+	max-height: 350px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
 }
 
-.bike-card__wrapper:hover  .bike-card__image{
-  opacity:0.3;
+.bike-card__wrapper:hover .bike-card__image {
+	opacity: 0.3;
 }
 
-.bike-card__wrapper  .bike-card__image:hover {
-  transform:perspective(800px)       rotateY(0deg);
-  opacity:1;
+.bike-card__wrapper .bike-card__image:hover {
+	transform: perspective(800px) rotateY(0deg);
+	opacity: 1;
 }
