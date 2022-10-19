@@ -1,6 +1,10 @@
+import { useContext } from 'react';
+import { CartContext } from '../../../context/CartContext';
 import './ProductCard.css';
 
 const ProductCard = (props) => {
+
+	const {addItemToCart} = useContext(CartContext);
 	return (
 		<div className={'bike-card__wrapper'}>
 			<div className={'bike-card__content'}>
@@ -10,7 +14,7 @@ const ProductCard = (props) => {
 				{props.price && 
 					<p className={'bike-card__price'}> {props.price} </p>
 				}
-				<button className={'bike-card__btn'}>Add to cart</button>
+				<button className={'bike-card__btn'} onClick={() => addItemToCart(props)}>Add to cart</button>
 			</div>
 		</div>
 	);
