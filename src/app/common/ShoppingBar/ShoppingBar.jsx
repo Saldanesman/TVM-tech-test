@@ -7,14 +7,10 @@ const ShoppingBar = () => {
 	const { cartItems } = useContext(CartContext);
 
 	useEffect(() => {
-		setProductsLength(
-			cartItems.reduce((previous, current) => previous + current.amount, 0)
-		);
+		setProductsLength(cartItems.reduce((previous, current) => previous + current.amount, 0));
 	}, [cartItems]);
 
 	// const total = cartItems.reduce((previous, current) => previous + current.amount * current.price, 0);
-
-
 
 	return (
 		<div className={'shopping-bar__wrapper'}>
@@ -24,12 +20,14 @@ const ShoppingBar = () => {
 			<li>asdasd</li>
 			<li>asdasd</li>
 			<li>asdasd</li>
-			
-			<div className={'shopping-bar__total__wrapper'}> 
-			<h1 className={'shopping-bar__total__title'}> Total: {productsLenght} </h1>
+
+			<div className={'shopping-bar__total__wrapper'}>
+				<h1 className={'shopping-bar__total__title'}> Total: {productsLenght} </h1>
 			</div>
 		</div>
 	);
 };
 
 export default ShoppingBar;
+
+// https://www.youtube.com/watch?v=ywvsztMU_oM&ab_channel=Mauro

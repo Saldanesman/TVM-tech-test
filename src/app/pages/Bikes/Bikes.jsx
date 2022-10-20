@@ -18,18 +18,16 @@ const Bikes = () => {
 			<div className={'bikes-page__wrapper'}>
 				<div className={'bike-page__container'}>
 					<NavBar />
-					{bike && bike.map((bike) => {
-						return (
-							<ProductCard key={bike.id} {...bike}/>
-						);
-					})}
+					{bike &&
+						bike.map((bike) => {
+							return <ProductCard key={bike.id} {...bike} />;
+						})}
 				</div>
 				<div className={'shopping-cart__container'}>
 					<ShoppingBar />
 				</div>
 			</div>
 		</CartProvider>
-		
 	);
 };
 

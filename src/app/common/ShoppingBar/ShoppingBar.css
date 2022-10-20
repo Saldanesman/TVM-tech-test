@@ -12,7 +12,7 @@
 .shopping-bar__title {
 	margin: auto;
 	padding-top: 10%;
-	text-align:center;
+	text-align: center;
 	color: var(--primary-white-color);
 	text-transform: uppercase;
 }
