@@ -1,6 +1,5 @@
 .header__wrapper {
 	padding: 0 0;
-	border-bottom: 1px solid var(--primary-white-color);
 	position: sticky;
 	top: 0;
 	background-color: var(--primary-blue-color);
@@ -10,6 +9,5 @@
 .header__logo {
 	padding: 1%;
 	width: 12.5em;
-	margin: auto;
 	display: block;
 }
