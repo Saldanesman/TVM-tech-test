@@ -1,0 +1,31 @@
+@import url('http://fonts.cdnfonts.com/css/switzer');
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-family: 'Switzer', sans-serif;
+}
+
+/* General styles */
+:root {
+	--primary-blue-color: #1a1a1f;
+	--secondary-blue-color: #222230;
+	--primary-green-color: #01de8f;
+	--secondary-green-color: #00ac70;
+	--primary-white-color: #f4faf8;
+
+	--border-rad: 10px;
+	--spacing-s: 8px;
+	--spacing-m: 16px;
+	--spacing-l: 24px;
+	--spacing-xl: 32px;
+	--spacing-xxl: 64px;
+	--width-container: 1200px;
+}
