@@ -1,7 +1,7 @@
 .shopping-bar__wrapper {
 	position: sticky;
 	top: 0;
-	background-color: rgb(110, 122, 116);
+	background-color: var(--primary-blue-color);
 	height: 100vh;
 	border-right: 1px solid var(--primary-white-color);
 	/* background-color: var(--primary-blue-color); */
@@ -29,4 +29,12 @@ li {
 	display: flex;
 	justify-content: center;
 	background-color: var(--primary-green-color);
+}
+
+.shopping-bar__cart-empty {
+	color: var(--primary-white-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2em;
 }
