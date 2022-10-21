@@ -1,15 +1,17 @@
 .bikes-page__wrapper {
-	background-color: var(--primary-white-color);
-	width: 100%;
 	display: flex;
 	flex-direction: row;
+	overflow: hidden;
 }
 
-.bike-page__container {
-	width: 80%;
+.bike-page__navbar {
+	width: 100vw;
+	position: fixed;
 }
 
-.shopping-cart__container {
-	width: 20%;
-	/* overflow-y: scroll; */
+.bike-page__content {
+	margin-top: 7.5%;
+}
+
+.bike-page__shopping {
 }

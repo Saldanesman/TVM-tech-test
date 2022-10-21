@@ -1,9 +1,12 @@
 import { useContext } from 'react';
 import { CartContext } from '../../../context/CartContext';
+import { formatPrice } from '../formatPrice';
 import './ItemCart.css';
 
 const ItemCart = ({ item }) => {
 	const { addItemToCart, deleteItemToCart } = useContext(CartContext);
+
+	const total = formatPrice(item.amount * item.price.replace(".", ""));
 	return (
 		<div className={'cartItem'}>
 			<div className={'dataContainer'}>
@@ -23,7 +26,7 @@ const ItemCart = ({ item }) => {
 				</div>
 				<div className={'right'}>
 					<div className={'amount'}>{item.amount}</div>
-					<p className={'total'}> {item.amount * item.price} € </p>
+					<p className={'total'}> {total}  </p>
 				</div>
 			</div>
 		</div>

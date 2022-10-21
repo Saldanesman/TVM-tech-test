@@ -3,7 +3,7 @@
 	width: 100vw;
 	background-color: var(--primary-blue-color);
 	display: grid;
-  grid-template-columns: auto;
+	grid-template-columns: auto;
 }
 
 .home-card {
@@ -27,8 +27,8 @@
 .home-button-wrapper {
 	width: 100%;
 	display: flex;
-  justify-content: center;
-  align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .home-button {

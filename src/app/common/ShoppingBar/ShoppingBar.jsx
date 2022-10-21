@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { CartContext } from '../../../context/CartContext';
 import ItemCart from '../ItemCart/ItemCart';
+import { formatPrice } from '../formatPrice';
 import './ShoppingBar.css';
 
 const ShoppingBar = () => {
@@ -8,14 +9,15 @@ const ShoppingBar = () => {
 	const { cartItems } = useContext(CartContext);
 
 	useEffect(() => {
-		setProductsLength(cartItems.reduce((previous, current) => previous + current.amount, 0));
+		setProductsLength(cartItems.reduce((prev, curr) => prev + curr.amount, 0));
 	}, [cartItems]);
 
 	cartItems.map((item) => console.log(item.title));
-	// const total = cartItems.reduce((previous, current) => previous + current.amount * current.price, 0);
+	const total = cartItems.reduce((prev, curr) => prev + curr.amount * curr.price.replace(".", ""), 0);
+
 	return (
 		<div className={'shopping-bar__wrapper'}>
-			<h1 className={'shopping-bar__title'}> Shopping Cart </h1>
+			<h1 className={'shopping-bar__title'}> {productsLenght} </h1>
 			{cartItems && (
 				<div>
 					{cartItems.length === 0 ? (
@@ -30,7 +32,7 @@ const ShoppingBar = () => {
 				</div>
 			)}
 			<div className={'shopping-bar__total__wrapper'}>
-				<h1 className={'shopping-bar__total__title'}> Total: {productsLenght} </h1>
+				<h1 className={'shopping-bar__total__title'}> Total: {formatPrice(total)}</h1>
 			</div>
 		</div>
 	);

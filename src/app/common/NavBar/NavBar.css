@@ -1,6 +1,5 @@
 .header__wrapper {
 	padding: 0 0;
-	position: sticky;
 	top: 0;
 	background-color: var(--primary-blue-color);
 	z-index: 1001;
