@@ -3,7 +3,6 @@ import bikes from '../../../api/db.json';
 import { CartProvider } from '../../../context/CartContext';
 import NavBar from '../../common/NavBar/NavBar';
 import ProductCard from '../../common/ProductCard/ProductCard';
-import ShoppingBar from '../../common/ShoppingBar/ShoppingBar';
 import './Bikes.css';
 
 const Bikes = () => {
@@ -24,9 +23,6 @@ const Bikes = () => {
 						bike.map((bike) => {
 							return <ProductCard key={bike.id} {...bike} />;
 						})}
-				</div>
-				<div className={'bike-page__shopping'}>
-					<ShoppingBar />
 				</div>
 			</div>
 		</CartProvider>

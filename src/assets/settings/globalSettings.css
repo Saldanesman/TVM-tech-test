@@ -13,13 +13,26 @@ body {
 	font-family: 'Switzer', sans-serif;
 }
 
+::-webkit-scrollbar{
+	width: 10px;
+}
+::-webkit-scrollbar-track{
+	background-color: var(--primary-white-color); 
+	
+}
+::-webkit-scrollbar-thumb{
+	background-color: var(--secondary-blue-color);
+}
+
 /* General styles */
 :root {
 	--primary-blue-color: #1a1a1f;
-	--secondary-blue-color: #222230;
+	--secondary-blue-color: #2a2a3b;
 	--primary-green-color: #01de8f;
 	--secondary-green-color: #00ac70;
 	--primary-white-color: #f4faf8;
+	--secondary-white-color: #dbe6e2;
+	--brown: #a75e33;
 
 	--border-rad: 10px;
 	--spacing-s: 8px;

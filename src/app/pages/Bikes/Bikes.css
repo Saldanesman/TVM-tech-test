@@ -7,6 +7,7 @@
 .bike-page__navbar {
 	width: 100vw;
 	position: fixed;
+	z-index: 1;
 }
 
 .bike-page__content {
@@ -14,4 +15,5 @@
 }
 
 .bike-page__shopping {
+	z-index: 0;
 }

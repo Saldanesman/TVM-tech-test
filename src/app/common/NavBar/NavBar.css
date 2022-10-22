@@ -1,12 +1,20 @@
 .header__wrapper {
-	padding: 0 0;
+	padding: 1% 2.5% 1%;
+	display: flex;
+	justify-content: space-between;
 	top: 0;
 	background-color: var(--primary-blue-color);
-	z-index: 1001;
+	z-index: 1;
 }
 
 .header__logo {
-	padding: 1%;
 	width: 12.5em;
 	display: block;
+}
+
+.header__cart {
+	padding: 1%;
+	width: 2em;
+	display: inline-block;
+	cursor: pointer;
 }

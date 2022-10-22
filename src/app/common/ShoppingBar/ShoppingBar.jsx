@@ -4,7 +4,7 @@ import ItemCart from '../ItemCart/ItemCart';
 import { formatPrice } from '../formatPrice';
 import './ShoppingBar.css';
 
-const ShoppingBar = () => {
+const ShoppingBar = ({ isOpen }) => {
 	const [productsLenght, setProductsLength] = useState(0);
 	const { cartItems } = useContext(CartContext);
 
@@ -16,14 +16,14 @@ const ShoppingBar = () => {
 	const total = cartItems.reduce((prev, curr) => prev + curr.amount * curr.price.replace(".", ""), 0);
 
 	return (
-		<div className={'shopping-bar__wrapper'}>
-			<h1 className={'shopping-bar__title'}> {productsLenght} </h1>
+		<div className={`shopping-bar__wrapper ${isOpen && 'open'}`}>
+				<h1 className={'shopping-bar__num-products'}> {productsLenght} </h1>
 			{cartItems && (
 				<div>
 					{cartItems.length === 0 ? (
 						<p className={'shopping-bar__cart-empty'}> The cart is empty </p>
 					) : (
-						<div className={'productsContainer'}>
+						<div className={'shopping-bar__list-products'}>
 							{cartItems.map((item, i) => (
 								<ItemCart key={i} item={item} />
 							))}
@@ -32,7 +32,7 @@ const ShoppingBar = () => {
 				</div>
 			)}
 			<div className={'shopping-bar__total__wrapper'}>
-				<h1 className={'shopping-bar__total__title'}> Total: {formatPrice(total)}</h1>
+				<h1 className={'shopping-bar__total__price'}> Total: {formatPrice(total)}</h1>
 			</div>
 		</div>
 	);
@@ -40,4 +40,3 @@ const ShoppingBar = () => {
 
 export default ShoppingBar;
 
-// https://www.youtube.com/watch?v=ywvsztMU_oM&ab_channel=Mauro

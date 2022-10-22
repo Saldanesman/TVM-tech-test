@@ -8,26 +8,26 @@ const ItemCart = ({ item }) => {
 
 	const total = formatPrice(item.amount * item.price.replace(".", ""));
 	return (
-		<div className={'cartItem'}>
-			<div className={'dataContainer'}>
-				<div className={'left'}>
-					<div className={'tooltip'}>
-						{item.title}
-						<span className={'tooltip-text'}>{item.title}</span>
-					</div>
-					<div className={'buttons'}>
-						<button className={'item-cart__button'} onClick={() => addItemToCart(item)}>
+		<div className={'items-cart__wrapper'}>
+			<div className={'items-cart__top'}>
+				<div className={'items-cart__amount'}>
+					<h1 className={'items-cart__amount-num'}>{item.amount}</h1>
+				</div>
+				<div className={'items-cart__tooltip'}>
+					{item.title}
+					<span className={'items-cart__tooltip-text'}>{item.title}</span>
+				</div>
+			</div>
+			<div className={'items-cart__bottom'}>
+				<div className={'items-cart__buttons'}>
+						<button className={'items-cart__button'} onClick={() => addItemToCart(item)}>
 							+
 						</button>
-						<button className={'item-cart__button'} onClick={() => deleteItemToCart(item)}>
+						<button className={'items-cart__button'} onClick={() => deleteItemToCart(item)}>
 							-
 						</button>
 					</div>
-				</div>
-				<div className={'right'}>
-					<div className={'amount'}>{item.amount}</div>
-					<p className={'total'}> {total}  </p>
-				</div>
+				<p className={'items-cart__total'}> {total}  </p>
 			</div>
 		</div>
 	);
