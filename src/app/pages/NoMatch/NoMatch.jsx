@@ -1,47 +1,25 @@
 import './NoMatch.css';
 
 const NoMatch = () => {
+	const link = 'https://c.tenor.com/0tv0M1mz0KUAAAAC/bike-fail.gif';
 	return (
-		<>
-			<h1 className={'error-404'}>404</h1>
-			<div className={'bicycle-container'}>
-				<div className={'wheel back-wheel'}>
-					<div className={'tire'}></div>
-					<div className={'rim'}></div>
-					<div className={'spokes'}></div>
-					<div className={'spokes'}></div>
-					<div className={'hub'}></div>
+		<div className={'error-404__wrapper'}>
+			<div className={'error-404__card'}>
+				<img className={'error-404__gif'} src={link} alt='bike fail' />
+				<h1 className={'error-404__title'}> Page 404 </h1>
+				<div className={'error-404__button-wrapper'}>
+					<a className={'error-404__button'} href={'/bikes'}>
+						{' '}
+						Go to Bikes page{' '}
+					</a>
 				</div>
-				<div className='wheel front-wheel'>
-					<div className='tire'></div>
-					<div className='rim'></div>
-					<div className='spokes'></div>
-					<div className='spokes'></div>
-					<div className='hub'></div>
-				</div>
-				<div className='gear'>
-					<div className='gear-red'></div>
-					<div className='tube pedal-tube'></div>
-					<div className='pedal'></div>
-				</div>
-				<div className='tube chain-tube'></div>
-				<div className='tube seat-tube-back'></div>
-				<div className='tube seat-tube-front'></div>
-				<div className='tube seat-tube-post'></div>
-				<div className='tube top-tube'></div>
-				<div className='tube top-handlebar-tube'></div>
-				<div className='tube top-handlebar-tube2'></div>
-				<div className='tube down-tube'></div>
-				<div className='tube head-tube'></div>
-				<div className='tube head-tube-post'></div>
-				<div className='saddle'></div>
-				<div className='handlebars'></div>
 			</div>
-			<a className={'return-home'} href={'/'}>
-				Return to Home
-			</a>
-		</>
+		</div>
 	);
 };
 
 export default NoMatch;
+
+// https://akhtarvahid.medium.com/how-to-access-fetch-the-local-json-file-to-react-5ce07c43731d
+
+// https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/

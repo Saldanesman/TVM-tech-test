@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
 import bikes from '../../../api/db.json';
 import { CartProvider } from '../../../context/CartContext';
-import NavBar from '../../common/NavBar/NavBar';
+import NavBarMobile from '../../common/NavBar/NavBar';
 import ProductCard from '../../common/ProductCard/ProductCard';
-import ShoppingBar from '../../common/ShoppingBar/ShoppingBar';
 import './Bikes.css';
 
 const Bikes = () => {
@@ -16,15 +15,14 @@ const Bikes = () => {
 	return (
 		<CartProvider>
 			<div className={'bikes-page__wrapper'}>
-				<div className={'bike-page__container'}>
-					<NavBar />
+				<div className={'bike-page__navbar'}>
+					<NavBarMobile />
+				</div>
+				<div className={'bike-page__content'}>
 					{bike &&
 						bike.map((bike) => {
 							return <ProductCard key={bike.id} {...bike} />;
 						})}
-				</div>
-				<div className={'shopping-cart__container'}>
-					<ShoppingBar />
 				</div>
 			</div>
 		</CartProvider>

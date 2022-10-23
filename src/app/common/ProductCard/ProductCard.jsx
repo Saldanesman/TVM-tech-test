@@ -1,23 +1,25 @@
 import { useContext } from 'react';
 import { CartContext } from '../../../context/CartContext';
-// import camera from '../../../assets/images/camera.svg';
+import imageNotFound from '../../../assets/images/imageNotFound';
 import './ProductCard.css';
 
 const ProductCard = (props) => {
 	const { addItemToCart } = useContext(CartContext);
+
+	const getImageError = (e) => { 
+		e.currentTarget.onerror = null;
+		e.currentTarget.src = imageNotFound;
+	}
+
 	return (
-		<div className={'cards'}>
-			{/* <div className={'card'}>
-				{props.image ? (
-					<img className={'header__logo'} src={props.image} />
-				) : (
-					<img className={'header__logo'} src={camera} />
-				)}
-			</div> */}
-			<div className={'text'}>
+		<div className={'bike-card__wrapper'}>
+			<div className={'bike-card__image'}>
+				<img className={'bike-card__src'} src={props.image} onError={getImageError}/>
+			</div>
+			<div className={'bike-card__content'}>
 				{props.title && <h2 className={'bike-card__title'}> {props.title} </h2>}
-				{props.price && <p className={'bike-card__price'}> {props.price} </p>}
-				<button className={'bike-card__btn'} onClick={() => addItemToCart(props)}>
+				{props.price && <p className={'bike-card__price'}> {props.price} € </p>}
+				<button className={'bike-card__add-btn'} onClick={() => addItemToCart(props)}>
 					Add to cart
 				</button>
 			</div>
@@ -26,6 +28,3 @@ const ProductCard = (props) => {
 };
 
 export default ProductCard;
-
-// https://www.youtube.com/watch?v=9YhlGTC87tw&ab_channel=DevSense  <----- importatntisimo
-// https://www.loginradius.com/blog/engineering/lazy-loading-in-react/

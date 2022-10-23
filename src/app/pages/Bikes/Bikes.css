@@ -1,15 +1,46 @@
+/* @media only screen and (max-width: 639px) {
+	.bikes-page__wrapper {
+
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
+
+@media only screen and (min-width: 640px) and (min-width: 999px)  {
+	.bikes-page__wrapper {
+
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.bikes-page__wrapper {
+
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 5fr 1fr;
+	}
+} */
+
 .bikes-page__wrapper {
-	background-color: var(--primary-blue-color);
-	width: 100%;
 	display: flex;
-	flex-direction: row;
+	overflow: hidden;
 }
 
-.bike-page__container {
-	width: 80%;
+.bike-page__navbar {
+	width: 100vw;
+	position: fixed;
+	z-index: 1;
 }
 
-.shopping-cart__container {
-	width: 20%;
-	/* overflow-y: scroll; */
+.bike-page__content {
+	margin-top: 10%;
+	margin-top: 7.5%;
+}
+
+.bike-page__shopping {
+	z-index: 0;
 }
