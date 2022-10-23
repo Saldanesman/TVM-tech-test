@@ -1,9 +1,9 @@
-import './Home.css';
 import logo from '../../../assets/images/logo.svg';
+import './Home.css';
 
 const Home = () => {
 	return (
-		<div className={'home-wrapper'}>
+		<div >
 			<img className={'home-logo'} src={logo} />
 			<div className={'home-card'}>
 				<h1 className={'home-title'}>
@@ -11,7 +11,7 @@ const Home = () => {
 					button below:
 				</h1>
 				<div className={'home-button-wrapper'}>
-					<a className={'home-button'} href={'/bikes'}>
+					<a className={'home-button'} href={'/bikes'} data-testid={'btnGoToBikes'}>
 						Go!
 					</a>
 				</div>
