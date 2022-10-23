@@ -13,14 +13,13 @@ body {
 	font-family: 'Switzer', sans-serif;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
 	width: 10px;
 }
-::-webkit-scrollbar-track{
-	background-color: var(--primary-white-color); 
-	
+::-webkit-scrollbar-track {
+	background-color: var(--primary-white-color);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
 	background-color: var(--secondary-blue-color);
 }
 
@@ -32,7 +31,7 @@ body {
 	--secondary-green-color: #00ac70;
 	--primary-white-color: #f4faf8;
 	--secondary-white-color: #dbe6e2;
-	--brown: #a75e33;
+	--brown: #f0d0be;
 
 	--border-rad: 10px;
 	--spacing-s: 8px;

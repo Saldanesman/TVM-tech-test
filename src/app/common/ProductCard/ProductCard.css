@@ -1,12 +1,11 @@
 .bike-card__wrapper {
 	padding: 1%;
 	margin: 2.5%;
-	width: 20vw;
 	border-radius: 5px;
 	position: relative;
-  display: inline-block;
-  text-align: center;
-
+	width: 30em;
+	display: inline-block;
+	text-align: center;
 	background-color: var(--secondary-white-color);
 }
 
