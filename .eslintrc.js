@@ -2,6 +2,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es2021: true,
+		cypress: true,
 	},
 	settings: {
 		react: {
@@ -19,7 +20,7 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
-	plugins: ['react'],
+	plugins: ['react', 'cypress'],
 	rules: {
 		'no-unused-vars': 'error',
 		'react/prop-types': 'off',
