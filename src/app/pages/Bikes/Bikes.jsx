@@ -3,7 +3,14 @@ import bikes from '../../../api/db.json';
 import { CartProvider } from '../../../context/CartContext';
 import NavBarMobile from '../../common/NavBar/NavBar';
 import ProductCard from '../../common/ProductCard/ProductCard';
+import { FixedSizeList as List } from "react-window";
 import './Bikes.css';
+
+const Row = ({ index, style }) => (
+  <div style={style}>
+    <ProductCard key={bikes.products[index].id} {...bikes.products[index]} />
+  </div>
+);
 
 const Bikes = () => {
 	const [bike, setBike] = useState([]);
@@ -19,10 +26,15 @@ const Bikes = () => {
 					<NavBarMobile />
 				</div>
 				<div className={'bike-page__content'} data-testid={'bike-list'}>
-					{bike &&
-						bike.map((bike) => {
-							return <ProductCard key={bike.id} {...bike} />;
-						})}
+					<List
+						className="List"
+						height={window.innerHeight}
+						itemCount={bike.length}
+						itemSize={500}
+						width={window.innerWidth}
+					>
+						{Row}
+					</List>
 				</div>
 			</div>
 		</CartProvider>
