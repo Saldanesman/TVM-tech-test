@@ -21,7 +21,7 @@ const ShoppingBarDesktop = () => {
 		<div className={'shopping-bar-desktop__wrapper'}>
 			<h1 className={'shopping-bar-desktop__num-products'}> Products: {productsLenght} </h1>
 			{cartItems && (
-				<div>
+				<div className={'shopping-bar-desktop__wrapper-list'}>
 					{cartItems.length === 0 ? (
 						<p className={'shopping-bar-desktop__cart-empty'}> The cart is empty </p>
 					) : (

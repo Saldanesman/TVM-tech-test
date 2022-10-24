@@ -12,7 +12,7 @@ context('No Match page', () => {
 	});
 
 	it('Should display 404 text', () => {
-		cy.get("h1").contains(title);
+		cy.get('h1').contains(title);
 	});
 
 	it('Should go to the Bikes page when the button is clicked', () => {

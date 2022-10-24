@@ -1,9 +1,20 @@
+@media only screen and (max-width: 640px) {
+	.bike-card__wrapper {
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	.bike-card__wrapper {
+		width: 35%;
+	}
+}
+
 .bike-card__wrapper {
 	padding: 1%;
 	margin: 2.5%;
 	border-radius: 5px;
 	position: relative;
-	width: 30em;
 	display: inline-block;
 	text-align: center;
 	background-color: var(--secondary-white-color);

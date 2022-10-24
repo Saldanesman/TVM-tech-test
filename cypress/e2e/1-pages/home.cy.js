@@ -1,7 +1,8 @@
 ///<reference types="cypress" />
 
 context('Home Page', () => {
-	const title = 'Welcome to the technical test of Rubén Saldaña. To access the application, press the button below:';
+	const title =
+		'Welcome to the technical test of Rubén Saldaña. To access the application, press the button below:';
 	beforeEach(() => {
 		cy.visit('http://localhost:3000');
 	});
@@ -12,7 +13,7 @@ context('Home Page', () => {
 	});
 
 	it('Should display welcome text', () => {
-		cy.get("h1").contains(title);
+		cy.get('h1').contains(title);
 	});
 
 	it('Should go to the Bikes page when the button is clicked', () => {
