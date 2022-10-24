@@ -46,8 +46,13 @@
 	color: var(--primary-blue-color);
 }
 
+.shopping-bar-desktop__list-products {
+	height: 100vh;
+}
+
 .shopping-bar-desktop__cart-empty {
 	color: var(--primary-white-color);
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: center;
