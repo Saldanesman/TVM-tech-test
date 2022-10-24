@@ -60,6 +60,7 @@
 .items-cart__total {
 	font-weight: bold;
 	margin: 2.5%;
+	color: var(--secondary-green-color);
 }
 
 .items-cart__buttons {
@@ -73,4 +74,5 @@
 	cursor: pointer;
 	background-color: var(--secondary-blue-color);
 	color: var(--primary-white-color);
+	border: none;
 }

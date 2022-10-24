@@ -25,7 +25,7 @@ const ShoppingBarMobile = ({ isOpen, onChange }) => {
 			</div>
 			<h1 className={'shopping-bar-mobile__num-products'}> Products: {productsLenght} </h1>
 			{cartItems && (
-				<div>
+				<div className={'shopping-bar-mobile__wrapper-list'}>
 					{cartItems.length === 0 ? (
 						<p className={'shopping-bar-mobile__cart-empty'}> The cart is empty </p>
 					) : (
