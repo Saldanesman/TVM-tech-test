@@ -18,7 +18,7 @@ const Bikes = () => {
 				<div className={'bike-page__navbar'}>
 					<NavBarMobile />
 				</div>
-				<div className={'bike-page__content'}>
+				<div className={'bike-page__content'} data-testid={"bike-list"}>
 					{bike &&
 						bike.map((bike) => {
 							return <ProductCard key={bike.id} {...bike} />;
