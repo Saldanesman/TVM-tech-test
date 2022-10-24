@@ -1,5 +1,7 @@
 import Home from "../app/pages/Home/Home";
 import { render, fireEvent } from "@testing-library/react";
+import { createMemoryHistory } from 'history';
+import { Router } from "react-router-dom";
 
 describe("Welcome", () => {
   it("Should render text screen", () => {
@@ -10,10 +12,15 @@ describe("Welcome", () => {
   });
 
   it("Should open Bikes page when the button is clicked", () => {
-    const sut = render(<Home />);
-    const btnGoBikes = sut.getByTestId('btnGoToBikes');
-    fireEvent.click(btnGoBikes);
-    expect().toHaveBeenCalled();
+    const history = createMemoryHistory({ initialEntries: ['/']});
+    const { getByText } = render(
+      <Router history={history}> 
+        <Home />
+      </Router>
+    );
+    expect(history.location.pathname).toBe('/');
+    fireEvent.click(getByText('Go!'));
+    expect(history.location.pathname).toBe('/bikes');
   });
 });
 

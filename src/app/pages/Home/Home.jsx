@@ -11,7 +11,7 @@ const Home = () => {
 					button below:
 				</h1>
 				<div className={'home-button-wrapper'}>
-					<a className={'home-button'} href={'/bikes'} data-testid={'btnGoToBikes'}>
+					<a className={'home-button'} href={'/bikes'}>
 						Go!
 					</a>
 				</div>
