@@ -19,7 +19,3 @@ const NoMatch = () => {
 };
 
 export default NoMatch;
-
-// https://akhtarvahid.medium.com/how-to-access-fetch-the-local-json-file-to-react-5ce07c43731d
-
-// https://blog.logrocket.com/developing-responsive-layouts-with-react-hooks/
